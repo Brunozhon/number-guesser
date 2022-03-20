@@ -19,21 +19,22 @@
           this.input = document.getElementById("input")
         }
         checkNumber(n) {
-          if n.isNaN() {
+          if (n.isNaN()) {
             alert("Make sure to type in a number!")
-          } else if n < this.answer {
+          } else if (n < this.answer) {
             this.min = n
             this.heading.innerHTML = `I'm thinking of a number between ${this.min} and ${this.max}`
             this.guesses++
-          } else if n > this.answer {
+          } else if (n > this.answer) {
             this.max = n
             this.heading.innerHTML = `I'm thinking of a number between ${this.min} and ${this.max}`
             this.guesses++
-          } else if n > this.min || n < this.max {
+          } else if (n > this.min || n < this.max) {
             alert(`Guess a number between ${this.min} and ${this.max}`)
           } else {
             this.heading.innerHTML = "Good job! Try again by reloading the browser!"
           }
+          this.input.value = ""
         }
       }
       var game = new GameState()
