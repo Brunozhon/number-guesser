@@ -40,7 +40,7 @@
       var game = new GameState()
       game.input.onkeyup = function(e) {
         if e.code === "Enter" {
-          checkNumber(parseInt(game.input.value))
+          game.checkNumber(parseInt(game.input.value))
         }
       }
     </script>
